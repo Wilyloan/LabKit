@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>498</width>
+    <height>517</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Общие стили для окна калькулятора */
+QWidget {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Стили для дисплея (QLabel) */
+QLabel {
+    background-color: #ffffff;
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+    padding: 10px;
+    color: #333333;
+    font-size: 24px;
+    qproperty-alignment: 'AlignRight | AlignVCenter';
+}
+
+/* Стили для кнопок калькулятора */
+QPushButton {
+    background-color: #e0e0e0;
+    border: 2px solid #bfbfbf;
+    border-radius: 5px;
+    padding: 15px;
+    color: #000000;
+    font-size: 18px;
+}
+
+QPushButton:hover {
+    background-color: #d0d0d0;
+}
+
+QPushButton:pressed {
+    background-color: #c0c0c0;
+}
+
+/* Отдельные стили для операций (+, -, *, /) */
+QPushButton.operator {
+    background-color: #ffb74d;
+    color: #ffffff;
+}
+
+QPushButton.operator:hover {
+    background-color: #ffa726;
+}
+
+QPushButton.operator:pressed {
+    background-color: #ff9800;
+}
+
+/* Стили для кнопки &quot;равно&quot; */
+QPushButton.equals {
+    background-color: #4caf50;
+    color: #ffffff;
+}
+
+QPushButton.equals:hover {
+    background-color: #43a047;
+}
+
+QPushButton.equals:pressed {
+    background-color: #388e3c;
+}
+
+/* Стили для кнопки &quot;C&quot; (очистка) */
+QPushButton.clear {
+    background-color: #f44336;
+    color: #ffffff;
+}
+
+QPushButton.clear:hover {
+    background-color: #e53935;
+}
+
+QPushButton.clear:pressed {
+    background-color: #d32f2f;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="layout_special1"/>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="layout_output">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>output</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="layout_5">
+      <item>
+       <widget class="QPushButton" name="btn_del">
+        <property name="text">
+         <string>&lt;-</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_clear">
+        <property name="text">
+         <string>AC</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_percent">
+        <property name="text">
+         <string>%</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_division">
+        <property name="text">
+         <string>/</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="layout_4">
+      <item>
+       <widget class="QPushButton" name="btn_7">
+        <property name="text">
+         <string>7</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_8">
+        <property name="text">
+         <string>8</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_9">
+        <property name="text">
+         <string>9</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_multiplication">
+        <property name="text">
+         <string>*</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="layout_3">
+      <item>
+       <widget class="QPushButton" name="btn_4">
+        <property name="text">
+         <string>4</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_5">
+        <property name="text">
+         <string>5</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_6">
+        <property name="text">
+         <string>6</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_minus">
+        <property name="text">
+         <string>-</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="layout_2">
+      <item>
+       <widget class="QPushButton" name="btn_1">
+        <property name="text">
+         <string>1</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_2">
+        <property name="text">
+         <string>2</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_3">
+        <property name="text">
+         <string>3</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_plus">
+        <property name="text">
+         <string>+</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="layout_1">
+      <item>
+       <widget class="QPushButton" name="btn_number_sign">
+        <property name="text">
+         <string>+/-</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_0">
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_comma">
+        <property name="text">
+         <string>,</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_reslut">
+        <property name="text">
+         <string>=</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

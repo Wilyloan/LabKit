@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>602</width>
+    <height>229</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #121212;
+    color: white;
+    font-family: Verdana;
+    font-size: 16pt;
+    margin: 10px;
+}
+
+QPushButton {
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+QPushButton#btn_lower, #btn_upper, #btn_digits, #btn_special {
+    padding: 10px;
+}
+
+QPushButton:hover {
+    border-color: #090;
+}
+
+QPushButton:pressed {
+    border: 4px solid #090;
+    border-radius: 5px;
+}
+
+QPushButton:checked {
+	background-color: #006300;
+	border-color: #090;
+}
+
+QFrame {
+    border: 2px solid gray;
+    border-radius: 5px;
+    margin-right: 0;
+}
+
+QFrame:hover {
+    border-color: #090;
+}
+
+QLineEdit {
+    background-color: #111;           /* тёмный фон */
+    color: #fff;                      /* текст пользователя */
+    border: 2px solid #444;           /* обычная рамка */
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 14px;
+    selection-background-color: #555; /* выделение текста */
+}
+
+QLineEdit:focus {
+    border: 2px solid #1E90FF;       /* рамка при фокусе */
+}
+
+QLineEdit::placeholder {
+    color: #888;                      /* светло-серый текст плейсхолдера */
+    font-style: italic;
+}
+QLineEdit {
+    background-color: #111;           /* тёмный фон */
+    color: #fff;                      /* текст пользователя */
+    border: 2px solid #444;           /* обычная рамка */
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 14px;
+    selection-background-color: #555; /* выделение текста */
+}
+
+QLineEdit:focus {
+    border: 2px solid #1E90FF;       /* рамка при фокусе */
+}
+
+QLineEdit::placeholder {
+    color: #888;                      /* светло-серый текст плейсхолдера */
+    font-style: italic;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="layout_input">
+      <item>
+       <widget class="QLineEdit" name="input_site">
+        <property name="maxLength">
+         <number>75</number>
+        </property>
+        <property name="placeholderText">
+         <string>key</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="input_login">
+        <property name="maxLength">
+         <number>25</number>
+        </property>
+        <property name="placeholderText">
+         <string>login</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="input_password">
+        <property name="maxLength">
+         <number>100</number>
+        </property>
+        <property name="placeholderText">
+         <string>password</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="layout_main">
+      <item>
+       <widget class="QPushButton" name="btn_save">
+        <property name="text">
+         <string>SAVE</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_back">
+        <property name="text">
+         <string>BACK</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

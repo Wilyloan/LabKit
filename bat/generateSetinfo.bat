@@ -1,0 +1,1 @@
+pyside6-uic setinfo.ui -o setinfo.py

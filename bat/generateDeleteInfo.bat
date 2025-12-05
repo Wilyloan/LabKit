@@ -1,0 +1,1 @@
+pyside6-uic deleteinfo.ui -o deleteinfo.py

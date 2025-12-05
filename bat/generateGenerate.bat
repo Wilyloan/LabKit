@@ -1,0 +1,1 @@
+pyside6-uic generatepassword.ui -o generatepassword.py
